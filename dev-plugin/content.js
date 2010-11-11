@@ -35,13 +35,22 @@
         var $this = $(this);
         html += "<div class='button' data-component='" + $this.attr('data-bc-component-name') + "'><h3>" + $this.attr('data-bc-component-name') + "</h3></div>";
       
+        var style_and_setting_html = "";
+        
         //get the styles for this component
         var styles_object = JSON.parse($('.styles', this).html());
-        var style_html = "";
         for(var style in styles_object) {
-          style_html += styleRow(style, styles_object[style].type, $this.attr('data-bc-component-id'), false);     
+          style_and_setting_html += styleRow(style, styles_object[style].type, $this.attr('data-bc-component-id'), false);     
         }
-        style_and_settings_html[$this.attr('data-bc-component-name')] = style_html;
+        
+        //parse out the settings for this component
+        var settings_object = JSON.parse($('.settings', this).html());
+        for(var setting in settings_object) {
+          console.log(settings_object[setting]);
+          style_and_setting_html += settingRow(setting, setting, $this.attr('data-bc-component-id'));
+        }
+        
+        style_and_settings_html[$this.attr('data-bc-component-name')] = style_and_setting_html;
       })
       
       //Grab all of the inline components from the page
@@ -83,6 +92,13 @@
     $comm.html(JSON.stringify(msg));
   });
   
+  $('.setting_input').live('blur', function() {
+    var $this = $(this);
+    var msg = {};
+    msg[$this.attr('data-component')] = {setting: $this.attr('data-name'), value: $this.val()};
+    $comm.html(JSON.stringify(msg));
+  });
+  
   $('.inline_input').live('blur', function() {
     var $this = $(this);
     $('[data-bc-component-type=' + $this.attr('data-component') + ']').css($this.attr('data-type'), handleImageURL($this.attr('data-type'), $this.val()));
@@ -114,9 +130,14 @@
   }
   
   function styleRow(name, type, id, inline) {
-     return "<div class='row'><div class='left'>" + name + ": </div><div class='right'><input class='" 
-            + ((inline) ? 'inline_input' : 'input') + "' type='text' data-type='" + type + "' data-component='" 
-            + id + "' data-style='" + name + "'></input></div></div>";  
+    return "<div class='row'><div class='left'>" + name + ": </div><div class='right'><input class='" 
+           + ((inline) ? 'inline_input' : 'input') + "' type='text' data-type='" + type + "' data-component='" 
+           + id + "' data-style='" + name + "'></input></div></div>";  
+  }
+  
+  function settingRow(name, type, id) {
+    return "<div class='row'><div class='left'>" + name + ": </div><div class='right'><input class='setting_input' type='text' data-name='" 
+    + name + "' data-component='" + id + "'></input></div></div>"; 
   }
   
   function handleTabAdjustment(evt) {

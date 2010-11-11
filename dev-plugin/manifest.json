@@ -1,7 +1,7 @@
 {
-  "name": "My First Extension",
+  "name": "Brightcove Mobile Toolkit",
   "version": "1.0",
-  "description": "The first extension that I made.",
+  "description": "Provides a suite of tools to assist in your template creation.  These include both component editable as seen in the Brightcove studio and also preview mode for various devices.",
   "browser_action": {
     "default_icon": "icon.png",
     "popup": "popup.html"
