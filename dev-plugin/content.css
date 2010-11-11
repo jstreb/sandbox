@@ -1,0 +1,118 @@
+#BCToolKitContainer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #373737;
+  height: 200px;
+  overflow: auto;
+  font-family: Arial;
+  color: #373737;
+  size: 14px;
+}
+
+/* reset anything */
+#BCToolKitContainer h1, h2, h3, h4, h5, p, div, span {
+  margin: 0px;
+  padding: 0px;
+}
+
+#BCToolKitContainer .container {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+
+#BCToolKitContainer .rightContainer {
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(#585858), to(#262626)) no-repeat;
+  position: relative;
+}
+
+#BCToolKitContainer .rightContainer h2 {
+  position: absolute;
+  top: 50%;
+  font-size: 24px;
+  color: #2E2E2E;
+  text-shadow: #606060 0px 1px 1px;
+  height: 24px;
+  margin-top: -12px;
+  width: 100%;
+  text-align: center;
+}
+
+#BCToolKitContainer .rightContainer .row {
+  margin-left: 20px;
+  padding-top: 20px;
+  color: #fff;
+  height: 20px;
+}
+
+#BCToolKitContainer .rightContainer .left {
+  float: left;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+}
+
+#BCToolKitContainer .rightContainer .right {
+  float: left;
+  margin-top: -2px;
+}
+
+
+#BCToolKitContainer .button {
+  height: 43px;
+  margin: 20px 0px 0px 20px;
+}
+
+#BCToolKitContainer .button h3 {
+  font-size: 20px;
+  webkit-box-shadow: #E9E9E9 1px 1px, #E9E9E9 -1px -1px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#EDEDED));
+  border: 1px solid #C3C3C3;
+  border-bottom-left-radius: 3px 3px;
+  border-bottom-right-radius: 3px 3px;
+  border-top-left-radius: 3px 3px;
+  border-top-right-radius: 3px 3px;
+  color: #528F96;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  display: inline;
+  margin: 0px;
+}
+
+#BCToolKitContainer .minimize { 
+  height: 30px;
+  padding: 10px 20px;
+  overflow: none;
+}
+
+#BCToolKitContainer .tab {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 15px;
+  background-color: #ccc;
+  border-left: solid 1px #528F96;
+  border-right: solid 1px #528F96;
+  border-bottom: solid 1px #528F96;
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  cursor: pointer;
+}
+
+#BCToolKitContainer .tab .line {
+  margin-top: 3px;
+  background-color: #528F96;
+  margin-left: 5px;
+  width: 30px;
+  height: 1px;
+}
