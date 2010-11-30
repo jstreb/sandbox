@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>Home</title>
+		
+		<!--Stylesheets -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.css" />
+		<link rel="stylesheet" href="./stylesheets/main.css" />
+		
+		<!--JavaScripts -->
+		<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>  
+		<script src="http://connect.facebook.net/en_US/all.js"></script>  
+		<script type='text/javascript' src='./javascripts/main.js'></script>   
+	</head>
+	<body>
+		<div data-role="page" id="home">
+	  	<div data-role="header" >
+	    	<h1>SMACK THE DUCK</h1>
+	    </div>
+	    <div data-role="content">
+				<a href="#new" data-role="button" data-icon="arrow-r" data-iconpos="right">New Game</a>
+				<a href="#existing" data-role="button" data-icon="arrow-r" data-iconpos="right">Existing Game</a>
+				<a href="#completed" data-role="button" data-icon="arrow-r" data-iconpos="right">Completed Games</a>
+				<a href="#instructions" data-role="button" data-icon="arrow-r" data-iconpos="right">Instructions</a>
+				<a id='signin_button' href="#signin" data-role="button" data-icon="arrow-r" data-iconpos="right">Sign In</a>
+			</div>
+	  </div>
+	
+		<div data-role="page" id="new">
+	  	<div data-role="header">
+	    	<h1>SMACK THE DUCK</h1>
+	    </div>
+	    <div data-role="content">
+				<input type='text' placeholder='Enter catch phrase...'></input>
+				<a class='smack' data-role='button'>SMACK IT!</a>
+			</div>
+	  </div>
+	
+		<div data-role="page" id="existing">
+	  	<div data-role="header">
+	    	<h1>SMACK THE DUCK</h1>
+	    </div> 
+			<div data-role="content">
+				<ul data-role="listview">
+					<li><a href="draw">Draw</a></li>
+					<li><a href="phrase">phrase</a></li>
+					<li><a href="draw">draw</a></li>
+					<li><a href="draw">draw</a></li>
+					<li><a href="phrase">phrase</a></li>
+				</ul>
+			</div>
+	  </div>
+	
+		<div data-role="page" id="draw">
+			<div data-role="header">
+	    	<h1>SMACK THE DUCK</h1>
+	    </div>
+			<div data-role="content">
+				<div id='notepad'>				
+				</div>
+			</div>
+			<div class='phrase'>And my sweet phrase would go here</div>
+			<div data-role='footer' data-position="fixed">
+				<div data-role="controlgroup" data-type="horizontal">
+					<div class='button save' data-role='button'>SMACK IT</div>
+					<div class='button clear' data-role='button'>CLEAR</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" id="phrase">
+				<div data-role="header">
+		    	<h1>SMACK THE DUCK</h1>
+		    </div>
+			<div data-role="content">
+				<input type='text' placeholder='Enter catch phrase...'></input>
+				<a id='smack' data-role='button'>SMACK IT!</a>	
+			</div>
+		</div>
+		
+		<div data-role="page" id="completed">
+				<div data-role="header">
+		    	<h1>SMACK THE DUCK</h1>
+		    </div>
+			<div id='completed' data-role="content">
+				
+			</div>
+		</div>
+			
+		<div data-role="page" id="instructions">
+	  	<div data-role="header">
+	    	<h1>SMACK THE DUCK</h1>
+	    </div>
+	    <div data-role="content">
+				instructions go here!
+			</div>
+	  </div>
+	
+		<div data-role="page" id="signin">
+	  	<div data-role="header">
+	    	<h1>SMACK THE DUCK</h1>
+	    </div>
+	    <div data-role="content">
+				<div>If you connect with Facebook then you can play the game with your friends, post your completed games to your wall and invite others to play</div>
+				<div id='login' data-role='button' data-theme='b'>Login with Facebook</div>
+				<div id="fb-root"></div>
+			</div>
+	  </div>
+	</body>
+</html>
+

@@ -1,0 +1,15 @@
+#notepad {
+	width: 100%;
+	height: 90%; /*reset in JavaScript*/
+	top: 40px;
+	left: 0px;
+	position: absolute;
+}
+
+[data-role='footer'] .button {
+	width: 45%;
+}
+
+[data-role='footer'] .save {
+	margin-left: 5%;
+}

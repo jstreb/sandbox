@@ -1,14 +1,83 @@
+/**********************************************
+ * CSS for the various devices
+ **********************************************/
+#BCDevContainer {
+  position: aboslute;
+  overflow: hidden;
+}
+
+#BCDevContainer .iphone_3g {
+  height: 480px;
+  width: 380px;
+}
+
 #BCToolKitContainer {
   position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #ffffff;
-  border: 1px solid #373737;
   height: 200px;
   overflow: auto;
   font-family: Arial;
   color: #373737;
   size: 14px;
+  display: none;
+  left: 0px;
+}
+
+#BCToolKitContainer .none {
+  display: none;
+}
+
+#BCToolKitContainer .block {
+  display: block;
+}
+
+#BCToolKitContainer .header {
+  background-color: #373737;
+  height: 20px;
+  width: 100%;
+}
+
+#BCToolKitContainer .header .button_icon {
+  margin-right: 10px;
+  float: right;
+  height: 18px;
+  width: 18px;
+  /*background-color: #ccc;
+  border: solid 1px #528F96;
+  border-bottom-left-radius: 3px 3px;
+  border-bottom-right-radius: 3px 3px;
+  border-top-left-radius: 3px 3px;
+  border-top-right-radius: 3px 3px;*/
+  cursor: pointer; 
+  color: #528F96;
+  text-align: center;
+  position: relative;
+  line-height: 20px;
+}
+
+#BCToolKitContainer .header .minimize .down_arrow {
+  border-color: #528F96 transparent transparent;
+  border-style: solid;
+  border-width: 7px 7px 0px;
+  position: absolute;
+  top: 6px;
+  left: 2px; 
+}
+
+#BCToolKitContainer .header .restore .up_arrow {
+   border-color: transparent transparent #528F96;
+  border-style: solid;
+  border-width: 0px 7px 7px; 
+  position: absolute;
+  top: 6px;
+  left: 2px; 
+}
+
+#BCToolKitContainer .header .close {
+  margin-right: 20px;
+  font-weight: bold;
 }
 
 /* reset anything */
@@ -85,12 +154,6 @@
   text-align: center;
   display: inline;
   margin: 0px;
-}
-
-#BCToolKitContainer .minimize { 
-  height: 30px;
-  padding: 10px 20px;
-  overflow: none;
 }
 
 #BCToolKitContainer .tab {
